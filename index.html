@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NSS-Cohort-E2</title>
+<script type="text/javascript" src="../lib/turn/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../lib/turn/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="../lib/turn/turn.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../main.css">
+  
+</head>
+<body>
+  <div id="flipbook">
+    <div class="hard"> Turn.js </div>
+    <div class="hard"></div>
+    <div> Page 1 </div>
+    <div> Page 2 </div>
+    <div> Page 3 </div>
+    <div> Page 4 </div>
+    <div class="hard"></div>
+    <div class="hard"></div>
+  </div>
+
+<script type="text/javascript">
+  $("#flipbook").turn({
+    width: 400,
+    height: 300,
+    autoCenter: true
+  });
+</script>
+</body>
+</html>
