@@ -6,7 +6,12 @@ body{
   margin:0;
   padding:0;
 }
-
+.page{
+  background-color: white;
+}
+.hard{
+  background-color: blue;
+}
 .flipbook-viewport{
   overflow:hidden;
   width:100%;
