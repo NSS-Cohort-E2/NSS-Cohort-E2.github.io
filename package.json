@@ -1,0 +1,19 @@
+{
+  "name": "npmfile",
+  "version": "1.0.0",
+  "description": "Class website for the NSS Cohort Evening 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NSS-Cohort-E2/NSS-Cohort-E2.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NSS-Cohort-E2/NSS-Cohort-E2.github.io/issues"
+  },
+  "homepage": "https://github.com/NSS-Cohort-E2/NSS-Cohort-E2.github.io#readme"
+}
