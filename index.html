@@ -2,17 +2,147 @@
 <html>
 <head>
   <title>🎉NSS-E2🎉</title>
+  <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" type="text/css" href="../lib/node_modules/materialize-css/dist/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../styles/main.css">
 </head>
 <body ng-app="classSite">
-<section ng-controller="homeCtrl">
-  sanity check
-  {{test}}
-  <p ng-repeat="student in students"><img class="studentPhotos" src="{{student.imagebw}}"><img class="studentPhotos" src="{{student.imagesilly}}"</p>
-</section>
+  <!-- parallax landing image -->
+  <div class="parallax-container">
+    <div class="parallax"><img class="classPic" src="/images/classsilly.jpg"></div>
+  </div>
+  <div class="mobileCover">
+    <h3 class="center-align">NSS Evening Cohort 2</h3>
+    <h5 class="center-align">LOUD N' PROUD, WE'RE LIVING THE DREAM, WE'RE THE CLASS OF 2016</h5>
+  </div>
+  <!-- end parallax cover image -->
+  <section id="classNameDiv" class="section" style="height: 200px;">
+    <h1 class="center-align">NSS EVENING COHORT 2</h1>
+    <hr>
+    <h5 class="center-align"><i>"LOUD N' PROUD, WE'RE LIVING THE DREAM, WE'RE THE CLASS OF 2016!" - Kirk Walter Graves</i></h5>
+  </section>
 
+  <section id="studentSection" ng-controller="homeCtrl" ng-switch="listState" class="animate-switch-container">
+      <div class="container">
+
+      <div class="row animate-switch rowBg" ng-switch-when="students">
+        <div class="col m3 s12 imgPadding" ng-repeat="student in students">
+          <img class="bwPhotos studentListHover" ng-click="goToInfo(student, $index)" src="{{student.imagebw}}" alt=""/>
+          <div class="valign-wrapper nameTag">
+              <h5 class="valign">{{student.name}}</h5>
+          </div>
+          <!-- <p class="nameTag">{{student.name}}</p> -->
+        </div>
+      </div>
+    </div>
+
+
+
+      <div class="row animate-switch" ng-switch-when="student0">
+        <a ng-click="goToInfo()" class="waves-effect waves-light btn"><i class="material-icons">keyboard_arrow_left</i> Students</a>
+        <div ng-if="singleStudent.sid-1 >= 0" ng-click="studentCarousel(singleStudent.sid, 'left')" class="carouselLeftArrow"><i class="material-icons">keyboard_arrow_left</i> Previous Student</div>
+        <div ng-if="singleStudent.sid+1 <= 11" ng-click="studentCarousel(singleStudent.sid, 'right')" class="carouselRightArrow">Next Student <i class="material-icons">keyboard_arrow_right</i></div>
+        <div class="container">
+          <div class="row">
+            <img class="bwPhotos col m5" src="{{singleStudent.imagesilly}}" alt=""/>
+            <section class="col m6">
+              <h2>{{singleStudent.name}}</h2>
+              <ul>
+                <a href="http://{{singleStudent.website}}">WEBSITE | </a>
+                <a href="http://{{singleStudent.github}}">GITHUB | </a>
+                <a href="http://{{singleStudent.linkedin}}">LINKEDIN | </a>
+                <a href="mailto:{{singleStudent.email}}">EMAIL</a>
+              </ul>
+              <p><i class="material-icons">radio</i> Currently Spinning - {{singleStudent.spinning}}</p>
+              <h5 ng-if="checkTitle()">Final Capstone - {{singleStudent.beTitle}}</h5>
+              <p ng-if="checkTitle()">{{singleStudent.beCapDesc}}</p>
+              <!-- social links -->
+              <h5>Who am I?</h5>
+              <p>{{singleStudent.aboutMe}}</p>
+              <h5>One Aspiration</h5>
+              <p>{{singleStudent.oneAspiration}}</p>
+              <h5>One Interesting Fact</h5>
+              <p>{{singleStudent.oneFact}}</p>
+            </section>           
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row animate-switch" ng-switch-when="student">
+        <a ng-click="goToInfo()" class="waves-effect waves-light btn"><i class="material-icons">keyboard_arrow_left</i> Students</a>
+        <div ng-if="singleStudent.sid-1 >= 0"  ng-click="studentCarousel(singleStudent.sid, 'left')" class="carouselLeftArrow"><i class="material-icons">keyboard_arrow_left</i> Previous Student</div>
+        <div ng-if="singleStudent.sid+1 <=11" ng-click="studentCarousel(singleStudent.sid, 'right')" class="carouselRightArrow">Next Student <i class="material-icons">keyboard_arrow_right</i></div>
+        <div class="container">
+          <div class="row">
+            <img class="bwPhotos col m5" src="{{singleStudent.imagesilly}}" alt=""/>
+            <section class="col m6">
+              <h2>{{singleStudent.name}}</h2>
+              <ul>
+                <a href="http://{{singleStudent.website}}">WEBSITE | </a>
+                <a href="http://{{singleStudent.github}}">GITHUB | </a>
+                <a href="http://{{singleStudent.linkedin}}">LINKEDIN | </a>
+                <a href="mailto:{{singleStudent.email}}">EMAIL</a>
+              </ul>
+              <p><i class="material-icons">radio</i> Currently Spinning - {{singleStudent.spinning}}</p>
+              <h5 ng-if="checkTitle()">Final Capstone - {{singleStudent.beTitle}}</h5>
+              <p ng-if="checkTitle()">{{singleStudent.beCapDesc}}</p>
+              <!-- social links -->
+              <h5>Who am I?</h5>
+              <p>{{singleStudent.aboutMe}}</p>
+              <h5>One Aspiration</h5>
+              <p>{{singleStudent.oneAspiration}}</p>
+              <h5>One Interesting Fact</h5>
+              <p>{{singleStudent.oneFact}}</p>
+            </section>           
+          </div>
+        </div>
+      </div>
+
+
+        <div class="row animate-switch" ng-switch-when="student2">
+        <a ng-click="goToInfo()" class="waves-effect waves-light btn"><i class="material-icons">keyboard_arrow_left</i> Students</a>
+        <div ng-if="singleStudent.sid-1 >= 0" ng-click="studentCarousel(singleStudent.sid, 'left')" class="carouselLeftArrow"><i class="material-icons">keyboard_arrow_left</i> Previous Student</div>
+        <div ng-if="singleStudent.sid+1 <= 11" ng-click="studentCarousel(singleStudent.sid, 'right')" class="carouselRightArrow">Next Student <i class="material-icons">keyboard_arrow_right</i></div>
+        <div class="container">
+          <div class="row">
+            <img class="bwPhotos col m5" src="{{singleStudent.imagesilly}}" alt=""/>
+            <section class="col m6">
+              <h2>{{singleStudent.name}}</h2>
+              <ul>
+                <a href="http://{{singleStudent.website}}">WEBSITE | </a>
+                <a href="http://{{singleStudent.github}}">GITHUB | </a>
+                <a href="http://{{singleStudent.linkedin}}">LINKEDIN | </a>
+                <a href="mailto:{{singleStudent.email}}">EMAIL</a>
+              </ul>
+              <p><i class="material-icons">radio</i> Currently Spinning - {{singleStudent.spinning}}</p>
+              <h5 ng-if="checkTitle()">Final Capstone - {{singleStudent.beTitle}}</h5>
+              <p ng-if="checkTitle()">{{singleStudent.beCapDesc}}</p>
+              <!-- social links -->
+              <h5>Who am I?</h5>
+              <p>{{singleStudent.aboutMe}}</p>
+              <h5>One Aspiration</h5>
+              <p>{{singleStudent.oneAspiration}}</p>
+              <h5>One Interesting Fact</h5>
+              <p>{{singleStudent.oneFact}}</p>
+            </section>           
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+  </section>
+
+<script type="text/javascript" src="../lib/node_modules/jquery/dist/jquery.min.js"></script>
+
+<script type="text/javascript" src="../lib/node_modules/materialize-css/dist/js/materialize.min.js"></script>
 <script type="text/javascript" src="../lib/node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="../lib/bower_components/angular-animate/angular-animate.min.js"></script>
 <script type="text/javascript" src="../Scripts/app.js"></script>
 </body>
 </html>
