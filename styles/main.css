@@ -13,7 +13,7 @@
 .bwPhotos{
   width:100%;
 }
-#classNameDiv h2,#classNameDiv h5{
+.classNameDiv h2,.classNameDiv h5{
   color: white;
 }
 ul li:nth-child(2), ul li:nth-child(3){
@@ -21,7 +21,7 @@ ul li:nth-child(2), ul li:nth-child(3){
   border-left: 2px solid black;
 }
 
-#classNameDiv{
+.classNameDiv{
   background-color: #283233;
 }
 .nameTag{
@@ -38,36 +38,47 @@ ul li:nth-child(2), ul li:nth-child(3){
 .imgPadding img{
     box-shadow: 0px 2px 0px #283233;
 }
+.arrow{
+  font-size: 3.5em !important;
+}
+.SSInfoCont{
+  box-shadow: 0px 2px 0px #283233;
+}
+
+.infoPadding{
+  padding:30px !important;
+}
 
 .carouselLeftArrow{
   position: absolute;
-  height:inherit;
+  height:100px;
   line-height: 100%;
   top:300px;
-  left:15px;
-  color: teal;
+  background-color: #86d2c9;
+  height:48px;
+
 }
 .carouselLeftArrow:hover{
   cursor:pointer;
-  color: black;
+  color: #283233;
 }
 .carouselRightArrow{
   position: absolute;
-  height:inherit;
+  height:100px;
   line-height: 100%;
   top:300px;
-  right:15px;
-  color: teal;
+  right:0;
+  background-color: #86d2c9;
+  height: 48px;
 }
 .carouselRightArrow:hover{
   cursor:pointer;
-  color: black;
+  color: #283233;
 }
 
 h5{
     font-size: 1.2rem;
     width:100%;
-    text-align: center;
 }
 h2{
   margin-top: 0px;
@@ -117,6 +128,12 @@ ul li{
   opacity: .8;
   cursor: pointer;
   background-color: white;
+}
+a{
+  color:#86d2c9;
+}
+a:visited{
+  color:#86d2c9;
 }
 
 @media screen and (min-width: 768px){
