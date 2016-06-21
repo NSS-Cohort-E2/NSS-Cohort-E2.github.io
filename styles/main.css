@@ -22,8 +22,8 @@ body{
 .classTitle{
   visibility: hidden; 
   letter-spacing: 5px;
-  border:10px solid white;
-  padding: 10px;
+  border:6px solid white;
+  padding: 15px;
   position: absolute;
   z-index: 101;
   top: 50%;
@@ -32,8 +32,8 @@ body{
   color: white;
   animation-name:className;
   animation-fill-mode:forwards;
-  animation-duration: 2s;
-  animation-delay: 2.25s;
+  animation-duration: 1.5s;
+  animation-delay: 2s;
   animation-timing-function:linear;
 }
 
@@ -61,17 +61,23 @@ body{
   z-index: 100;
   animation:overlayFade;
   animation-fill-mode:forwards;
-  animation-duration: 1.75s;
+  animation-duration: 1.5s;
   animation-delay: .5s;
   animation-timing-function:linear;
 }
 
-
+.allStudentsBtn{
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: #86d2c9;
+}
 
 
 .mobileCover{
   height:100vh !important;
   display: block;
+  background-color: #86d2c9;
 }
 .sql{
   width:60px;
@@ -89,6 +95,9 @@ body{
 .classNameDiv h2,.classNameDiv h5, .classNameDiv h3{
   color: white;
   letter-spacing: 5px;
+}
+.classNameDiv h3{
+  font-size: 36px;
 }
 ul li:nth-child(2), ul li:nth-child(3){
   border-right: 2px solid black;
@@ -126,6 +135,9 @@ ul li:nth-child(2), ul li:nth-child(3){
   background-color: #f3f6fb;
   padding: 20px 0;
 }
+.techIcons{
+  background-color: transparent !important;
+}
 .infoPadding{
   padding:30px !important;
 }
@@ -142,6 +154,7 @@ ul li:nth-child(2), ul li:nth-child(3){
 .carouselLeftArrow:hover{
   cursor:pointer;
   color: #283233;
+  background-color: #26a69a;
 }
 .carouselRightArrow{
   position: absolute;
@@ -155,6 +168,7 @@ ul li:nth-child(2), ul li:nth-child(3){
 .carouselRightArrow:hover{
   cursor:pointer;
   color: #283233;
+  background-color: #26a69a;
 }
 
 h5{
