@@ -1,11 +1,84 @@
+body{
+  background-color: #283233;
+}
 .studentPhotos{
   height: 100px;
   width: 100px;
 }
+@keyframes className{
+  0%{
+    visibility: visible;
+    opacity: 0;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.classTitle{
+  visibility: hidden; 
+  letter-spacing: 5px;
+  border:10px solid white;
+  padding: 10px;
+  position: absolute;
+  z-index: 101;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  animation-name:className;
+  animation-fill-mode:forwards;
+  animation-duration: 2s;
+  animation-delay: 2.25s;
+  animation-timing-function:linear;
+}
+
+@keyframes overlayFade{
+  0%{
+    visibility: visible;
+    opacity: 0;
+  }
+  50%{
+    opacity: .25;
+  }
+  100%{
+    visibility: visible;
+    opacity: .5;
+  }
+}
+
+.overlay{
+  visibility: hidden;
+  background-color: black;
+  display: block;
+  position: absolute;
+  height:100vh !important;
+  width: 100%;
+  z-index: 100;
+  animation:overlayFade;
+  animation-fill-mode:forwards;
+  animation-duration: 1.75s;
+  animation-delay: .5s;
+  animation-timing-function:linear;
+}
+
+
+
+
 .mobileCover{
   height:100vh !important;
   display: block;
-  background-color: grey;
+}
+.sql{
+  width:60px;
+  height: 60px;
+}
+.techName{
+  width: 100%;
 }
 .parallax-container{
   display: none;
@@ -13,8 +86,9 @@
 .bwPhotos{
   width:100%;
 }
-.classNameDiv h2,.classNameDiv h5{
+.classNameDiv h2,.classNameDiv h5, .classNameDiv h3{
   color: white;
+  letter-spacing: 5px;
 }
 ul li:nth-child(2), ul li:nth-child(3){
   border-right: 2px solid black;
@@ -40,11 +114,18 @@ ul li:nth-child(2), ul li:nth-child(3){
 }
 .arrow{
   font-size: 3.5em !important;
+  color: white;
 }
 .SSInfoCont{
-  box-shadow: 0px 2px 0px #283233;
+  box-shadow: 0px 1px 0px #283233;
 }
-
+.titleSpacing{
+  letter-spacing: 3px;
+}
+.techIconBg{
+  background-color: #f3f6fb;
+  padding: 20px 0;
+}
 .infoPadding{
   padding:30px !important;
 }
@@ -83,6 +164,10 @@ h5{
 h2{
   margin-top: 0px;
 }
+h3{
+  margin-top: 0px;
+
+}
 #studentSection{
   background-color: #f3f6fb;
   height: 100%;
@@ -91,10 +176,32 @@ ul li{
   padding: 0 5px;
 }
 
+.techPadding div{
+  padding: 10px !important;
+}
+.techPadding{
+  margin-bottom: 0;
+  padding: 20px 0 0 0;
+}
+footer{
+  background-color: #86d2c9;
+  color: white;
+  font-size:1.5em;
+  height: 75px;
+}
+.editor{
+  background-color: #f3f6fb;
+  height: auto;
+  font-size: 2em;
+  padding:40px 0;
+}
+.editor h5{
+  font-size: 1em;
+  text-align: center;
+}
 .animate-switch-container {
   position:relative;
   background:white;
-  border:1px solid black;
   height: auto;
   overflow:hidden;
 }
@@ -135,7 +242,9 @@ a{
 a:visited{
   color:#86d2c9;
 }
-
+.whiteLink{
+  color: white !important;
+}
 @media screen and (min-width: 768px){
   .mobileCover{
     display: none;
