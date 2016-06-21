@@ -32,8 +32,8 @@ body{
   color: white;
   animation-name:className;
   animation-fill-mode:forwards;
-  animation-duration: 1.5s;
-  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-delay: 1.3s;
   animation-timing-function:linear;
 }
 
@@ -61,8 +61,8 @@ body{
   z-index: 100;
   animation:overlayFade;
   animation-fill-mode:forwards;
-  animation-duration: 1.5s;
-  animation-delay: .5s;
+  animation-duration: 1s;
+  animation-delay: .1s;
   animation-timing-function:linear;
 }
 
@@ -227,10 +227,10 @@ footer{
 }
 
 
-.animate-switch.ng-animate {
+/*.animate-switch.ng-animate {
   transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
 
-  position:relative;
+  position:absolute;
   top:0;
   left:0;
   right:0;
@@ -244,7 +244,7 @@ footer{
 .animate-switch.ng-leave,
 .animate-switch.ng-enter.ng-enter-active {
   left:0;
-}
+}*/
 .studentListHover:hover{
   opacity: .8;
   cursor: pointer;
